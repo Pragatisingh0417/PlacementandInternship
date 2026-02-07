@@ -43,7 +43,7 @@ export default function AboutSection() {
 
           <a
             href="/about-us"
-            className="inline-block mt-8 bg-[#0e73e4] text-white px-6 py-3 rounded-md hover:bg-[#03228f] transition"
+            className="inline-block mt-8 bg-[#03228f] text-white px-6 py-3 rounded-md hover:bg-[#03228f] transition"
           >
             Know More
           </a>

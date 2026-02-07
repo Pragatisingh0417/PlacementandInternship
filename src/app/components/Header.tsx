@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -8,44 +8,47 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-5">
         
         {/* LOGO */}
         <Link href="/" className="text-2xl font-bold text-[#03228f]">
-          Braintech
+         <Image
+                    src="/images/logo.png"
+                    alt="Braintech Info Solutions"
+                    width={180}
+                    height={50}
+                    className=""
+                  />
         </Link>
 
         {/* DESKTOP MENU */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-900">
+        <nav className="hidden lg:flex items-center gap-8 text-[16px] font-medium text-gray-900">
           <Link href="/">Home</Link>
-          <Link href="/about-us">About Us</Link>
+          <Link href="/about">About Us</Link>
 
           {/* COURSES DROPDOWN */}
           <div className="relative group">
             <span className="cursor-pointer">Courses</span>
             <div className="absolute left-0 top-full hidden group-hover:block bg-white shadow-md rounded-md w-52">
-              <Link href="/courses/it" className="block px-4 py-2 hover:bg-gray-100">
+              <Link href="/courses/it-courses" className="block px-4 py-2 hover:bg-gray-100">
                 IT Courses
               </Link>
-              <Link href="/courses/digital-marketing" className="block px-4 py-2 hover:bg-gray-100">
+              <Link href="/digital-marketing" className="block px-4 py-2 hover:bg-gray-100">
                 Digital Marketing
               </Link>
-              <Link href="/courses/app-development" className="block px-4 py-2 hover:bg-gray-100">
+              <Link href="/app-development" className="block px-4 py-2 hover:bg-gray-100">
                 App Development
               </Link>
             </div>
           </div>
 
-          <Link href="/placements">Placements</Link>
           <Link href="/internships">Internships</Link>
-          <Link href="/corporate-training">Corporate Training</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/contact-us">Contact Us</Link>
+          <Link href="/contact">Contact Us</Link>
 
           {/* CTA */}
           <Link
             href="/contact-us"
-            className="bg-[#0e73e4] text-white px-5 py-2 rounded-md hover:bg-[#03228f] transition"
+            className="bg-[#03228f] text-white px-5 py-2 rounded-md hover:bg-[#0e73e4] transition"
           >
             Enroll Now
           </Link>
@@ -68,11 +71,8 @@ export default function Header() {
           <Link href="/courses/it">IT Courses</Link>
           <Link href="/courses/digital-marketing">Digital Marketing</Link>
           <Link href="/courses/app-development">App Development</Link>
-          <Link href="/placements">Placements</Link>
           <Link href="/internships">Internships</Link>
-          <Link href="/corporate-training">Corporate Training</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/contact-us" className="block text-center bg-[#0e73e4] text-white py-2 rounded">
+          <Link href="/contact-us" className="block text-center bg-[#03228f] text-white py-2 rounded">
             Enroll Now
           </Link>
         </div>

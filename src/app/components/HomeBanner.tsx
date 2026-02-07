@@ -1,63 +1,68 @@
+import Link from "next/link";
+import Image from "next/image";
+
 export default function HomeBanner() {
   return (
-    <section className="bg-gradient-to-r from-[#03228f] to-[#0e73e4] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-10 items-center">
-        
-        {/* LEFT CONTENT */}
-        <div>
-          <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-            Training & Placement Cell <br />
-            <span className="text-yellow-300">Build Your Career With Us</span>
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+
+      {/* BACKGROUND IMAGE */}
+      <Image
+        src="/images/hero-1.jpg"
+        alt="Online learning at Braintech"
+        fill
+        priority
+        className="object-cover"
+      />
+
+      {/* BLACK GRADIENT OVERLAY (LEFT → RIGHT) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/60 to-black/90" />
+
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div className="max-w-3xl ml-auto text-right">
+
+          {/* Optional dotted decoration */}
+          <div className="mb-6 flex justify-end">
+            <div className="grid grid-cols-5 gap-1 opacity-40">
+              {Array.from({ length: 15 }).map((_, i) => (
+                <span
+                  key={i}
+                  className="w-1 h-1 bg-white rounded-full"
+                />
+              ))}
+            </div>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            Take Your Admission To <br />
+            The Best Online Learning <br />
+            Course
           </h1>
 
-          <p className="mt-6 text-lg text-blue-100">
-            Industry-focused IT, Digital Marketing & App Development courses with
-            guaranteed placement assistance and live projects.
+          <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
+            Learn industry-ready skills with expert mentors, live projects,
+            and placement-focused training programs designed for real careers.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
+          {/* CTA BUTTONS */}
+          <div className="mt-10 flex flex-wrap gap-4 justify-end">
+            <Link
               href="/courses"
-              className="bg-white text-[#03228f] px-6 py-3 rounded-md font-semibold hover:bg-gray-100"
+              className="bg-[#03228f] hover:bg-[#03228f] text-white px-8 py-4 rounded-lg font-semibold transition"
             >
-              Explore Courses
-            </a>
+              View Courses
+            </Link>
 
-            <a
-              href="/contact-us"
-              className="border border-white px-6 py-3 rounded-md hover:bg-white hover:text-[#03228f] transition"
+            <Link
+              href="/contact"
+              className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition"
             >
-              Free Counseling
-            </a>
+              Join For Free
+            </Link>
           </div>
 
-          {/* STATS */}
-          <div className="mt-10 flex gap-10 text-sm">
-            <div>
-              <p className="text-2xl font-bold">500+</p>
-              <p>Students Placed</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold">50+</p>
-              <p>Hiring Partners</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold">10+</p>
-              <p>Years Experience</p>
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT IMAGE */}
-        <div className="hidden lg:block">
-          <img
-            src="/images/banner.jpg"
-            alt="Training and Placement"
-            className="w-full"
-          />
         </div>
       </div>
     </section>
   );
-
 }

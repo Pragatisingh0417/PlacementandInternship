@@ -31,7 +31,7 @@ export default function PopularCourses() {
       <div className="max-w-7xl mx-auto px-6">
         
         <h2 className="text-3xl font-bold text-center text-[#03228f]">
-          Popular Courses
+          Our Popular Online Courses
         </h2>
         <p className="text-center mt-3 text-gray-600">
           Job-oriented courses designed for real-world careers
@@ -45,7 +45,7 @@ export default function PopularCourses() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#0e73e4]"
+              className="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#03228f]"
             >
               <h3 className="text-lg font-semibold text-[#03228f]">
                 {course.title}
@@ -57,7 +57,7 @@ export default function PopularCourses() {
 
               <a
                 href={course.link}
-                className="inline-block mt-5 text-[#0e73e4] font-medium hover:underline"
+                className="inline-block mt-5 text-[#03228f] font-medium hover:underline"
               >
                 View Course →
               </a>
