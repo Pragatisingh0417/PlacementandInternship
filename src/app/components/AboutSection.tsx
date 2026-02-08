@@ -1,53 +1,86 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* IMAGE */}
-        <motion.img
-          src="/images/about-image.jpg"
-          alt="About Training Institute"
-          className="rounded-xl shadow-lg"
-          initial={{ opacity: 0, x: -60 }}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-        />
+          className="relative h-[360px] md:h-[420px] rounded-2xl overflow-hidden"
+        >
+          <Image
+            src="/images/about-image.jpg"
+            alt="Braintech training and talent development"
+            fill
+            className="object-cover"
+          />
+          {/* subtle overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#03228f]/20 to-transparent" />
+        </motion.div>
 
         {/* CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl font-bold text-[#03228f]">
-            About Our Training & Placement Cell
+          <span className="inline-block mb-3 text-sm font-semibold uppercase tracking-wide text-[#03228f]">
+            About Braintech
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+            Training, Placement 
+            & Talent Solutions
           </h2>
 
-          <p className="mt-4 text-gray-600 leading-relaxed">
-            We are a career-focused training institute delivering industry-ready
-            skills in IT, Digital Marketing, and App Development. Our mission is
-            to bridge the gap between education and employment through
-            hands-on learning and placement assistance.
+          <p className="mt-6 text-gray-600 leading-relaxed text-base">
+            Braintech Info Solutions is a career-focused training and placement
+            institute delivering industry-ready skills in IT, Digital Marketing,
+            and App Development through hands-on learning and live projects.
           </p>
 
-          <ul className="mt-6 space-y-3 text-gray-700">
-            <li>✔ Industry Expert Trainers</li>
-            <li>✔ Live Projects & Internships</li>
-            <li>✔ Placement & Interview Support</li>
-            <li>✔ Corporate-Level Curriculum</li>
-          </ul>
+          {/* DUAL POSITIONING PARAGRAPH */}
+          <p className="mt-4 text-gray-600 leading-relaxed text-base">
+            In addition to training students, we partner with companies as a
+            talent solutions provider — supplying internship-ready and
+            job-ready candidates aligned with real industry requirements.
+          </p>
 
-          <a
-            href="/about-us"
-            className="inline-block mt-8 bg-[#03228f] text-white px-6 py-3 rounded-md hover:bg-[#03228f] transition"
-          >
-            Know More
-          </a>
+          {/* HIGHLIGHTS */}
+          <div className="mt-8 grid grid-cols-2 gap-4 text-sm text-gray-700">
+            <div>• Industry Expert Trainers</div>
+            <div>• Live Projects & Internships</div>
+            <div>• Placement & Interview Support</div>
+            <div>• Employer-Aligned Curriculum</div>
+          </div>
+
+          {/* CTA ROW */}
+          <div className="mt-10 flex flex-row gap-4 flex-wrap">
+            <Link
+              href="/about"
+              className="bg-[#03228f] text-white px-7 py-3 rounded-lg font-semibold hover:bg-[#021b70] transition"
+            >
+              Know More
+            </Link>
+
+            {/* EMPLOYER CTA */}
+            <Link
+              href="/employers"
+              className="border border-[#03228f] text-[#03228f] px-7 py-3 rounded-lg font-semibold hover:bg-[#03228f] hover:text-white transition"
+            >
+              For Employers
+            </Link>
+          </div>
         </motion.div>
+
       </div>
     </section>
   );

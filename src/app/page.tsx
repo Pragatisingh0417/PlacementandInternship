@@ -10,12 +10,14 @@ import WhyUs from "./components/Whyus";
 import TrainingBenefits from "./components/TrainingBenefits";
 import HeroCTA from "./components/HeroCTA";
 import TrustedBySection from "./components/TrustedBySection";
+import EmployerCTA from "./components/EmployerCTA";
 
 export default function Home() {
   return (
     <section className="">
       <HomeBanner />
       <AboutSection />
+      <EmployerCTA />
       <HomeCourses />
       <TrustedBySection />
       <WhyUs />

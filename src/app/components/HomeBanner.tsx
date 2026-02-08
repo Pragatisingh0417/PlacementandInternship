@@ -34,15 +34,17 @@ export default function HomeBanner() {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-            Take Your Admission To <br />
-            The Best Online Learning <br />
-            Course
-          </h1>
+  Build Skills That <br />
+  Companies Actually <br />
+  Hire For
+</h1>
 
-          <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
-            Learn industry-ready skills with expert mentors, live projects,
-            and placement-focused training programs designed for real careers.
-          </p>
+<p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
+  Industry-ready IT, App Development, and Digital Marketing training
+  with live projects, internships, and placement support —
+  designed for real careers.
+</p>
+
 
           {/* CTA BUTTONS */}
           <div className="mt-10 flex flex-wrap gap-4 justify-end">
@@ -57,8 +59,7 @@ export default function HomeBanner() {
               href="/contact"
               className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition"
             >
-              Join For Free
-            </Link>
+Free Career Counselling            </Link>
           </div>
 
         </div>

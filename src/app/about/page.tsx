@@ -96,30 +96,38 @@ export default function AboutPage() {
       </span>
 
       <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">
-        Building Skills. <br className="hidden md:block" />
-        Shaping Careers.
+        Building Skilled Talent. <br className="hidden md:block" />
+        Powering Careers & Companies.
       </h2>
 
       <div className="space-y-5 text-gray-700 leading-relaxed text-base">
         <p>
-          Braintech Info Solutions is a career-focused training and placement
-          institute dedicated to bridging the gap between education and
-          real-world industry requirements.
+          <strong className="text-gray-900">Braintech Info Solutions</strong> is a
+          career-focused training, internship, and recruitment partner that
+          bridges the gap between education and real-world industry needs.
         </p>
 
         <p>
-          Our programs emphasize hands-on learning, live projects, and
-          practical exposure — ensuring learners are confident, skilled,
-          and job-ready from day one.
+          We equip students and professionals with
+          <strong> industry-ready skills</strong> through hands-on training,
+          live projects, and structured internships—ensuring they are confident,
+          job-ready, and aligned with current market demands.
+        </p>
+
+        <p>
+          At the same time, we help companies
+          <strong> hire trained, deployment-ready talent</strong> through our
+          internship-to-hire and direct recruitment models.
         </p>
 
         <p className="font-medium text-gray-900">
-          We don’t just teach technologies — we build careers.
+          We don’t just train individuals — we enable careers and support
+          business growth.
         </p>
       </div>
 
       {/* CTA */}
-      <div className="mt-10 flex flex-row gap-4">
+      <div className="mt-10 flex flex-wrap gap-4">
         <Link
           href="/courses"
           className="bg-[#03228f] text-white px-7 py-3 rounded-lg font-semibold hover:bg-[#021b70] transition"
@@ -128,29 +136,30 @@ export default function AboutPage() {
         </Link>
 
         <Link
-          href="/contact"
+          href="/employers"
           className="border border-[#03228f] text-[#03228f] px-7 py-3 rounded-lg font-semibold hover:bg-[#03228f] hover:text-white transition"
         >
-          Talk to an Expert
+          Hire From Us
         </Link>
       </div>
     </div>
 
     {/* IMAGE */}
-    <div className="relative h-[360px] md:h-[420px] rounded-2xl overflow-hidden">
+    <div className="relative h-[360px] md:h-[420px] rounded-2xl overflow-hidden shadow-lg">
       <Image
         src="/images/about-us.png"
-        alt="Braintech training classroom"
+        alt="Braintech training and recruitment"
         fill
         className="object-cover"
       />
 
       {/* subtle overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#03228f]/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#03228f]/25 to-transparent" />
     </div>
 
   </div>
 </section>
+
 
 
       {/* ================= MISSION & VISION ================= */}

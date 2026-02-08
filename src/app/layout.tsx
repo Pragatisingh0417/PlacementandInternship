@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import TopHeader from "./components/TopHeader";
+import FloatingContactButtons from "./components/FloatingContactButtons";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Training and Placement",
-  description: "Training and Placement",
+  title: "Recruitment / Talent supply partner for companies",
+  description: "Recruitment / Talent supply partner for companies",
 };
 
 export default function RootLayout({
@@ -29,8 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-
+<TopHeader />
         <Header />
+        <FloatingContactButtons />
         {children}
         <Footer />
       </body>
