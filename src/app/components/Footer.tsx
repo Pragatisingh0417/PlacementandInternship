@@ -2,6 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -15,10 +23,10 @@ export default function Footer() {
         className="object-cover"
       />
 
-      {/* GRADIENT OVERLAY */}
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-[#03228f]/95 to-[#03228f]" /> */}
+      {/* OVERLAY */}
+      {/* <div className="absolute inset-0 bg-[#03228f]/95" /> */}
 
-      {/* CONTENT */}
+      {/* MAIN CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 grid gap-12 md:grid-cols-4">
 
         {/* BRAND */}
@@ -30,27 +38,40 @@ export default function Footer() {
             height={50}
             className="mb-6"
           />
+
           <p className="text-gray-200 text-sm leading-relaxed">
             Braintech Info Solutions is a career-focused training and placement
             institute delivering industry-ready skills through practical
-            learning, internships, and professional guidance.
+            learning, internships, and placement support.
           </p>
 
           {/* SOCIAL LINKS */}
           <div className="flex gap-4 mt-6">
             <a
-              href="https://www.linkedin.com"
+              href="https://www.facebook.com"
               target="_blank"
+              aria-label="Facebook"
               className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition"
             >
-              in
+              <Facebook size={18} />
             </a>
+
             <a
               href="https://www.instagram.com"
               target="_blank"
+              aria-label="Instagram"
               className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition"
             >
-              ig
+              <Instagram size={18} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              aria-label="LinkedIn"
+              className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition"
+            >
+              <Linkedin size={18} />
             </a>
           </div>
         </div>
@@ -60,11 +81,21 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-4">
             Courses
           </h4>
+
           <ul className="space-y-3 text-sm text-gray-200">
-            <li><Link href="/courses/it/full-stack-development">Full Stack Development</Link></li>
-            <li><Link href="/courses/it/react-js">React & Next.js</Link></li>
-            <li><Link href="/courses/app/flutter-development">App Development</Link></li>
-            <li><Link href="/courses/digital-marketing">Digital Marketing</Link></li>
+            {/* IT */}
+            <li><Link href="/courses/it-courses/full-stack-development-courses">Full Stack Development</Link></li>
+            <li><Link href="/courses/it-courses/full-stack-development-courses">React / Next.js</Link></li>
+            <li><Link href="/courses/it-courses/full-stack-development-courses">Python Development</Link></li>
+            <li><Link href="/courses/it-courses/full-stack-development-courses">PHP Development</Link></li>
+
+            {/* APP */}
+            <li><Link href="/courses/app/flutter-development-courses">Flutter App Development</Link></li>
+            <li><Link href="/courses/app/android-development-courses">Android Development</Link></li>
+
+            {/* DIGITAL */}
+            <li><Link href="/courses/digital-marketing-courses">Digital Marketing</Link></li>
+            <li><Link href="/courses/digital-marketing-courses">SEO & Performance Marketing</Link></li>
           </ul>
         </div>
 
@@ -73,11 +104,13 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-4">
             Quick Links
           </h4>
+
           <ul className="space-y-3 text-sm text-gray-200">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About Us</Link></li>
             <li><Link href="/courses">Courses</Link></li>
-            <li><Link href="/internship">Internship</Link></li>
+            <li><Link href="/internships">Internships</Link></li>
+            <li><Link href="/employers">For Employers</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
@@ -85,12 +118,30 @@ export default function Footer() {
         {/* CONTACT */}
         <div>
           <h4 className="text-lg font-semibold mb-4">
-            Contact
+            Contact Us
           </h4>
-          <ul className="space-y-3 text-sm text-gray-200">
-            <li>Email: info@braintechinfosolutions.com</li>
-            <li>Phone: +91 XXXXX XXXXX</li>
-            <li>India</li>
+
+          <ul className="space-y-4 text-sm text-gray-200">
+            <li className="flex gap-3">
+              <Mail size={16} className="mt-1" />
+              <span>info@braintechinfosolutions.com</span>
+            </li>
+
+            <li className="flex gap-3">
+              <Phone size={16} className="mt-1" />
+              <div>
+                <p>+91 7390030157</p>
+                <p>+91 8287725005</p>
+              </div>
+            </li>
+
+            <li className="flex gap-3">
+              <MapPin size={16} className="mt-1" />
+              <span>
+                Levana Cyber Heights,<br />
+                Vibhuti Khand, Lucknow
+              </span>
+            </li>
           </ul>
         </div>
 
@@ -101,13 +152,14 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row gap-4 items-center justify-between text-sm text-gray-200">
 
           <p>
-            © {new Date().getFullYear()} Braintech Info Solutions. All rights reserved.
+            © {new Date().getFullYear()} <a href="https://braintechinfosolutions.com/">
+              Braintech Info Solutions.
+              </a> All rights reserved.
           </p>
 
-          {/* LEGAL */}
           <div className="flex gap-6">
             <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms-and-conditions">Terms & Conditions</Link>
+            <Link href="/contact">Contact Us</Link>
           </div>
 
         </div>

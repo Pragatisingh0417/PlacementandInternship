@@ -10,50 +10,50 @@ const courses = [
   {
     title: "Full Stack Development",
     category: "IT",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/it/full-stack-development",
+    image: "/images/full-stack-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "React.js Development",
     category: "IT",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/it/react-js",
+    image: "/images/react-image-2.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "Next.js Development",
     category: "IT",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/it/next-js",
+    image: "/images/next-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "PHP & MySQL",
     category: "IT",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/it/php-mysql",
+    image: "/images/php-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "Android App Development",
     category: "App",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/app/android-development",
+    image: "/images/andriod-app-image.jpg",
+    link: "/courses/app-development-courses",
   },
   {
     title: "Flutter App Development",
     category: "App",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/app/flutter-development",
+    image: "/images/flutter-app-image.jpg",
+    link: "/courses/app-development-courses",
   },
   {
     title: "Digital Marketing",
     category: "Digital Marketing",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/digital-marketing",
+    image: "/images/digital-marketing-image.jpg",
+    link: "/courses/digital-marketing-courses",
   },
   {
     title: "SEO & Performance Marketing",
     category: "Digital Marketing",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/digital-marketing/seo",
+    image: "/images/SEO & Performance Marketing-image.jpg",
+    link: "/courses/digital-marketing-courses",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function CoursesPage() {
                 className="group bg-white border border-gray-200 rounded-xl overflow-hidden transition hover:border-[#03228f]"
               >
                 {/* Image */}
-                <div className="relative h-40 w-full overflow-hidden">
+                <div className="relative h-70 w-full overflow-hidden">
                   <Image
                     src={course.image}
                     alt={course.title}

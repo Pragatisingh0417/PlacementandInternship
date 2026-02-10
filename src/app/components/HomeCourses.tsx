@@ -6,57 +6,57 @@ const courses = [
     title: "Full Stack Development",
     category: "IT Course",
     desc: "Frontend, backend, databases, and real-world project experience.",
-    image: "/images/businesspeople-office-meeting.jpg",
-    link: "/it-courses",
+    image: "/images/full-stack-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "React.js Development",
     category: "IT Course",
     desc: "Build modern, component-driven user interfaces with React.",
-    image: "/images/businesspeople-office-meeting.jpg",
-    link: "/courses/it/react-js",
+    image: "/images/react-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "Next.js Development",
     category: "IT Course",
     desc: "Create fast, SEO-friendly web applications using Next.js.",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/it/next-js",
+    image: "/images/next-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "PHP & MySQL",
     category: "IT Course",
     desc: "Server-side development with PHP and database integration.",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/it/php-mysql",
+    image: "/images/php-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "Android App Development",
     category: "App Development",
     desc: "Design and develop native Android applications.",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/app/android-development",
+    image: "/images/andriod-app-image.jpg",
+    link: "/courses/it-courses/app-development",
   },
   {
     title: "Flutter App Development",
     category: "App Development",
     desc: "Build cross-platform mobile apps with Flutter.",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/app/flutter-development",
+    image: "/images/flutter-app-image.jpg",
+    link: "/courses/app-development",
   },
   {
     title: "Digital Marketing",
     category: "Digital Marketing",
     desc: "SEO, social media, paid ads, and growth strategies.",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/digital-marketing",
+    image: "/images/digital-marketing-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
   {
     title: "SEO & Performance Marketing",
     category: "Digital Marketing",
     desc: "Rank websites and drive targeted traffic effectively.",
-    image: "/images/courses/course-placeholder.jpg",
-    link: "/courses/digital-marketing/seo",
+    image: "/images/SEO & Performance Marketing-image.jpg",
+    link: "/courses/it-courses/full-stack-development-courses",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function HomeCourses() {
               className="group bg-white border border-gray-200 rounded-xl overflow-hidden transition hover:border-[#03228f]"
             >
               {/* Image */}
-              <div className="relative h-40 w-full overflow-hidden">
+              <div className="relative h-60 w-full overflow-hidden">
                 <Image
                   src={course.image}
                   alt={course.title}
