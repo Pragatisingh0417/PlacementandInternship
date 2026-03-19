@@ -5,16 +5,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TopHeader from "./components/TopHeader";
 import FloatingContactButtons from "./components/FloatingContactButtons";
+import PopupForm from "./components/PopupForm";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Recruitment / Talent supply partner for companies",
@@ -28,13 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
 <TopHeader />
         <Header />
         <FloatingContactButtons />
         {children}
+        <PopupForm />
         <Footer />
       </body>
     </html>
