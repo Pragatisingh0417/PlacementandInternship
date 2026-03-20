@@ -11,8 +11,7 @@ import {
   Megaphone,
 } from "lucide-react";
 
-export default function Header() {
-  const pathname = usePathname();
+export default function Header({ openPopup }: { openPopup: () => void }) {  const pathname = usePathname();
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
@@ -168,12 +167,12 @@ export default function Header() {
           </Link>
 
           {/* CTA */}
-          <Link
-            href="/contact"
-            className="bg-[#03228f] text-white px-5 py-2 rounded-md hover:bg-[#021b70]"
-          >
-            Enroll Now
-          </Link>
+          <button
+  onClick={openPopup}
+  className="bg-[#03228f] text-white px-5 py-2 rounded-md"
+>
+  Enroll Now
+</button>
         </nav>
 
         {/* ================= MOBILE TOGGLE ================= */}
